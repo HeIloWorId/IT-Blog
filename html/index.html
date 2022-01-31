@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT Blog</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="https://kit.fontawesome.com/99b0590667.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo"> My Blog</a>
+            <nav class="header-menu">
+                <a href=""> Home</a>
+                <a href=""> News</a>
+                <a href=""> Tutorials</a>
+                <a href="#about" style="transition: 0.5s;"> About us</a>
+                <a href="#"> Contact us</a>
+            </nav>
+
+            <div class="box">
+                <div class="search-box">
+                    <input class="search-txt" type="text" name="" placeholder="Type to search...">
+                    <label for="" class="icon">
+                        <i class="fas fa-search"></i>
+                    </label>
+                        
+                </div>
+            </div>
+                
+            <div class="menuToggle"></div>
+            
+            
+        </header>
+        <ul class="navigation">
+            <li data-text="Log in"><a href=""> Log in</a></li>
+            <li data-text="Register"><a href=""> Register</a></li>
+            <li data-text="Help"><a href=""> Help</a></li>
+        </ul>
+        <!-- Random fields -->
+        <section class="fields" id="fields">
+        </section>
+
+        <!-- About us -->
+        <section class="about" id="about">
+            <div class="title">
+            <h2> About us</h2>
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                    <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse finibus mauris lectus, eu placerat enim hendrerit at. Aenean euismod, risus et egestas laoreet, elit tortor malesuada elit, in finibus odio neque at velit. Vestibulum venenatis elit ut nibh laoreet, sit amet tempor urna molestie. Aliquam in molestie arcu, vel varius tellus. Nulla ultricies urna nec libero bibendum, quis interdum massa porta. Donec at tortor quam. <br><br>Sed at ante id justo pulvinar iaculis. Duis molestie libero id sodales suscipit. Quisque eu erat mauris. Nam scelerisque imperdiet orci a ullamcorper. Ut interdum hendrerit pharetra. Quisque fermentum bibendum porttitor. Morbi erat diam, finibus at molestie in, molestie quis tellus. Morbi erat justo, pellentesque vel tincidunt a, ultrices convallis ipsum.
+                        
+                       <br><br>Maecenas venenatis condimentum posuere. Quisque consequat vitae massa et sollicitudin. Nulla laoreet felis ut magna egestas efficitur. Cras tincidunt magna sit amet ex ultrices rutrum. Aliquam sodales dolor in ante semper, non sollicitudin ipsum scelerisque. Donec quis nisi hendrerit, aliquam neque at, consectetur enim. Praesent ullamcorper mattis vulputate. Praesent eget rhoncus diam, ut varius mauris. <br><br> 
+                        
+                    </p>
+                </div>
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="../ressources/aboutUs/me.jpg" class="cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Scripts -->
+        <script>
+            const menuToggle = document.querySelector(".menuToggle");
+            const navigation = document.querySelector(".navigation");
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        
+            window.addEventListener('scroll', function(){
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            })
+        </script>
+    </body>
+</html>
